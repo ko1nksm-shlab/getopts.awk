@@ -9,6 +9,7 @@ getopts for awk
 
 ${AWK:-awk} "$(cat getopts.awk)"'
   BEGIN {
+    # OPTIND = 1
     while(getopts("fgo:p:", ARGV)) {
       if (OPT == "f") print OPT
       if (OPT == "g") print OPT
